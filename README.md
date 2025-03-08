@@ -1,5 +1,5 @@
 # Neo SVS RPC
-用于实现歌声合成（Singing voice synthesis）编辑器与引擎标准化的RPC接口。基本上是仿照了OpenAI的接口风格。
+用于实现歌声合成（Singing voice synthesis）编辑器与引擎标准化的RPC接口。基本上是仿（chāo）照（xí）了OpenAI的接口风格。
 
 ## API调用
 
@@ -127,7 +127,7 @@ POST https://<api端点>/v1/audio/singing/editorsession
 
 ### 4. 自动推理曲线参数
 
-同“替换各种参数”中的做法，但是传入的是字符串型的`"AUTOMATIC"`。如果不支持推理，报错。
+同“替换各种参数”中的做法，但是传入的曲线参数是字符串型的`"AUTOMATIC"`。如果不支持推理，报错。
 
 ### 5. 推理音频
 
@@ -166,9 +166,9 @@ POST https://<api端点>/v1/audio/singing
 
 返回值（如果是CCS流式）：
 ```
-data: {"type": "audio.singing.ccstream", "voice": {"type": "<传递方式>", "wave": "<wav文件>"}, "offset": <偏移>, "length": <有效长度>}
+data: {"type": "audio.singing.ccstream", "voice": {"type": "<传递方式>", "wave": "<传递>"}, "offset": <对应起始位置>, "length": <有效长度>}
 
-data: {"type": "audio.singing.ccstream", "voice": {"type": "<传递方式>", "wave": "<wav文件>"}, "offset": <偏移>, "length": <有效长度>}
+data: {"type": "audio.singing.ccstream", "voice": {"type": "<传递方式>", "wave": "<传递>"}, "offset": <对应起始位置>, "length": <有效长度>}
 
 ...
 
