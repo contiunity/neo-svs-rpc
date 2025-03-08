@@ -125,11 +125,15 @@ POST https://<api端点>/v1/audio/singing/editorsession
 6. 曲线参数的项名是`curves.<参数名>`，每0.01一个采样。音符级参数应当包含在notes内的音符项中，项名是`param.<参数名>`。
 7. 参数名应该是小写简称，尽可能用三个字母，如果是openutau有的，必须和openutau相同。
 
-### 4. 自动推理曲线参数
+### 4. 读取参数
+
+按照“替换各种参数”进行，什么参数都不传就是读取。
+
+### 5. 自动推理曲线参数
 
 同“替换各种参数”中的做法，但是传入的曲线参数是字符串型的`"AUTOMATIC"`。如果不支持推理，报错。
 
-### 5. 推理音频
+### 6. 推理音频
 
 请求（如果是Session）：
 ```
@@ -185,7 +189,7 @@ data: {"type": "audio.singing.ccstream.stop"}
 5. `offset`和`length`的单位是0.01秒。
 6. 传递方式为`path`时，`wave`项是文件url；传递方式为`blockchain`时，`wave`项是IPFS CID；传递方式是`b64e`时，`wave`项是base64。
 
-### 6. 删除Session
+### 7. 删除Session
 
 请求（第一种方式）：
 ```
