@@ -127,7 +127,7 @@ POST https://<api端点>/v1/audio/singing/editorsession
 
 ### 4. 自动推理曲线参数
 
-同“替换各种参数”中的做法，但是传入的是字符串型的`"AUTOMATIC"`。
+同“替换各种参数”中的做法，但是传入的是字符串型的`"AUTOMATIC"`。如果不支持推理，报错。
 
 ### 5. 推理音频
 
